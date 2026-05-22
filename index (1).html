@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aksi Hijau - Komunitas Pemuda Peduli Lingkungan Tangsel</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
+                    <i class="fa-solid fa-leaf text-emerald-600 text-2xl"></i>
+                    <span class="font-bold text-xl text-slate-900 tracking-tight">Aksi<span class="text-emerald-600">Hijau</span></span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                    <button onclick="showPage('home')" class="hover:text-emerald-600 transition cursor-pointer">Beranda</button>
+                    <a href="#proyek" class="hover:text-emerald-600 transition">Proyek</a>
+                    <button onclick="showPage('register')" class="hover:text-emerald-600 transition cursor-pointer">Daftar</button>
+                    <button onclick="showPage('member')" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition shadow-sm cursor-pointer"><i class="fa-solid fa-user mr-2"></i>Area Member</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main>
+        
+        <!-- PAGE 1: HOME -->
+        <div id="page-home" class="page-section">
+            <!-- Hero Section -->
+            <section class="relative bg-gradient-to-b from-emerald-50 to-white py-20 lg:py-32">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span class="bg-emerald-100 text-emerald-800 text-sm font-semibold px-4 py-1.5 rounded-full">Pemuda Tangsel Bergerak</span>
+                    <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight max-w-3xl mx-auto leading-tight">
+                        Bersama Jaga Pesisir & Kelola Sampah Kota
+                    </h1>
+                    <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
+                        Aksi nyata komunitas pemuda Tangerang Selatan untuk pelestarian hutan mangrove dan edukasi pengelolaan sampah mandiri demi lingkungan yang berkelanjutan.
+                    </p>
+                    <div class="mt-10 flex flex-wrap justify-center gap-4">
+                        <a href="#proyek" class="bg-emerald-600 text-white px-8 py-3.5 rounded-xl font-semibold hover:bg-emerald-700 transition shadow-md">Ikut Crowdfunding</a>
+                        <button onclick="showPage('register')" class="bg-white text-slate-700 border border-slate-200 px-8 py-3.5 rounded-xl font-semibold hover:bg-slate-50 transition cursor-pointer">Gabung Relawan</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Proyek & Donasi Section -->
+            <section id="proyek" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900">Program Utama Kami</h2>
+                    <p class="text-slate-600 mt-2">Pilih aksi nyata yang ingin Anda dukung hari ini.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Card 1: Mangrove -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col border border-slate-100">
+                        <div class="h-52 bg-emerald-800 flex items-center justify-center p-6 text-white text-center relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                            <h3 class="text-2xl font-bold relative z-10">Adopsi Mangrove Pesisir</h3>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded w-max">Crowdfunding</span>
+                            <p class="text-slate-600 mt-4 text-sm leading-relaxed">
+                                Pendanaan bibit dan penanaman hutan mangrove untuk menahan abrasi pantai serta memperbaiki ekosistem pesisir.
+                            </p>
+                            <!-- Progress Bar -->
+                            <div class="mt-6">
+                                <div class="flex justify-between text-xs font-semibold mb-1">
+                                    <span class="text-slate-500">Terkumpul: Rp15.400.000</span>
+                                    <span class="text-emerald-600">77%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-emerald-500 h-full w-[77%]"></div>
+                                </div>
+                                <div class="text-right text-xs text-slate-400 mt-1">Target: Rp20.000.000</div>
+                            </div>
+                            <button onclick="alert('Terima kasih atas niat baik Anda! Fitur payment gateway simulasi: Donasi berhasil disalurkan.')" class="mt-6 w-full bg-emerald-600 text-white text-center py-2.5 rounded-xl font-medium hover:bg-emerald-700 transition cursor-pointer">Donasi Sekarang</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Edukasi Sampah -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col border border-slate-100">
+                        <div class="h-52 bg-teal-800 flex items-center justify-center p-6 text-white text-center relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                            <h3 class="text-2xl font-bold relative z-10">Workshop Edukasi Sampah Warga Tangsel</h3>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-1 rounded w-max">Edukasi</span>
+                            <p class="text-slate-600 mt-4 text-sm leading-relaxed">
+                                Edukasi pemilahan sampah organik & anorganik skala rumah tangga serta pelatihan pembuatan kompos bagi warga perumahan.
+                            </p>
+                            <div class="mt-auto pt-6">
+                                <div class="flex items-center gap-2 text-sm text-slate-500 mb-4">
+                                    <i class="fa-regular fa-calendar-days text-teal-600"></i>
+                                    <span>Setiap Akhir Pekan</span>
+                                </div>
+                                <button onclick="showPage('register')" class="w-full bg-slate-900 text-white text-center py-2.5 rounded-xl font-medium hover:bg-slate-800 transition cursor-pointer">Daftar Relawan Kelas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PAGE 2: REGISTER -->
+        <div id="page-register" class="page-section hidden py-16 px-4 sm:px-6 lg:px-8 max-w-md mx-auto">
+            <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100">
+                <div class="text-center mb-6">
+                    <h2 class="text-2xl font-bold text-slate-900">Gabung Komunitas</h2>
+                    <p class="text-sm text-slate-500 mt-1">Lengkapi data diri untuk menjadi bagian dari aksi kami</p>
+                </div>
+                <form id="regForm" onsubmit="handleRegister(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Lengkap</label>
+                        <input type="text" id="regName" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-500 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Email</label>
+                        <input type="email" id="regEmail" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-500 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Kecamatan di Tangsel</label>
+                        <select required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-500 text-sm bg-white">
+                            <option value="">Pilih Kecamatan</option>
+                            <option>Ciputat</option>
+                            <option>Ciputat Timur</option>
+                            <option>Pamulang</option>
+                            <option>Pondok Aren</option>
+                            <option>Serpong</option>
+                            <option>Serpong Utara</option>
+                            <option>Setu</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Kata Sandi</label>
+                        <input type="password" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-500 text-sm">
+                    </div>
+                    <button type="submit" class="w-full bg-emerald-600 text-white py-3 rounded-xl font-medium hover:bg-emerald-700 transition mt-2 shadow-sm cursor-pointer">Daftar Sekarang</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- PAGE 3: MEMBER AREA -->
+        <div id="page-member" class="page-section hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- State Belum Login -->
+            <div id="member-login-state" class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-md border border-slate-100">
+                <div class="text-center mb-6">
+                    <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fa-solid fa-lock text-emerald-600 text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900">Masuk Area Member</h2>
+                    <p class="text-sm text-slate-500 mt-1">Gunakan akun demo atau daftar terlebih dahulu</p>
+                </div>
+                <form onsubmit="handleLogin(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Email</label>
+                        <input type="email" id="loginEmail" value="pemuda@tangsel.org" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-500 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Kata Sandi</label>
+                        <input type="password" value="123456" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-500 text-sm">
+                    </div>
+                    <button type="submit" class="w-full bg-emerald-600 text-white py-3 rounded-xl font-medium hover:bg-emerald-700 transition shadow-sm cursor-pointer">Masuk</button>
+                </form>
+                <div class="mt-4 text-center text-xs text-slate-400 bg-slate-50 p-2.5 rounded-lg">
+                    <strong>Saran Uji Coba:</strong> Langsung klik "Masuk" (Menggunakan akun demo default).
+                </div>
+            </div>
+
+            <!-- State Sudah Login (Dashboard Member) -->
+            <div id="member-dashboard-state" class="hidden">
+                <div class="flex flex-wrap justify-between items-center gap-4 mb-8 pb-4 border-b border-slate-200">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Halo, <span id="memberName">Penggiat Hijau</span>!</h2>
+                        <p class="text-slate-500 text-sm">Selamat datang di Ruang Kendali Kontribusi Lingkungan Anda.</p>
+                    </div>
+                    <button onclick="handleLogout()" class="border border-red-200 text-red-600 px-4 py-2 rounded-xl hover:bg-red-50 transition text-sm font-medium cursor-pointer">Keluar Keluar</button>
+                </div>
+
+                <!-- Dashboard Stats Grid -->
+                <div class="grid sm:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+                        <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 text-xl"><i class="fa-solid fa-seedling"></i></div>
+                        <div>
+                            <span class="block text-xs text-slate-400 font-semibold uppercase">Pohon Diadopsi</span>
+                            <span class="text-2xl font-bold text-slate-800">5 Pohon</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+                        <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 text-xl"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <div>
+                            <span class="block text-xs text-slate-400 font-semibold uppercase">Total Donasi</span>
+                            <span class="text-2xl font-bold text-slate-800">Rp250.000</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+                        <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center text-sky-600 text-xl"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div>
+                            <span class="block text-xs text-slate-400 font-semibold uppercase">Sesi Edukasi</span>
+                            <span class="text-2xl font-bold text-slate-800">2 Workshop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Konten Khusus Member (Aktivitas & Event Terbaru) -->
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                        <h3 class="font-bold text-lg text-slate-900 mb-4">Riwayat Aktivitas Anda</h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-4 pb-4 border-b border-slate-100">
+                                <div class="text-sm font-semibold text-slate-400 pt-0.5">22 Mei</div>
+                                <div>
+                                    <p class="text-sm font-medium text-slate-800">Berhasil mendonasikan Rp100.000 untuk Program Mangrove.</p>
+                                    <span class="text-xs text-emerald-600 font-semibold">Selesai</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="text-sm font-semibold text-slate-400 pt-0.5">10 Mei</div>
+                                <div>
+                                    <p class="text-sm font-medium text-slate-800">Mendaftar sebagai relawan "Edukasi Sampah Cluster Pamulang".</p>
+                                    <span class="text-xs text-amber-600 font-semibold">Mendatang</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-emerald-900 text-emerald-100 p-6 rounded-2xl shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[200px]">
+                        <div class="absolute -right-6 -bottom-6 opacity-10 text-9xl"><i class="fa-solid fa-tree"></i></div>
+                        <div>
+                            <h3 class="font-bold text-xl text-white mb-2">Undangan Gathering</h3>
+                            <p class="text-sm text-emerald-200/90 leading-relaxed">Kumpul komunitas relawan Aksi Hijau wilayah Tangerang Selatan bulan depan. Detail lokasi akan dikirim via email.</p>
+                        </div>
+                        <span class="text-xs bg-emerald-800 text-white w-max px-3 py-1 rounded-md font-medium mt-4">Internal Member</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-8 mt-20 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-4 text-sm">
+            <div>&copy; 2026 Aksi Hijau Tangsel. Pemuda Peduli Lingkungan.</div>
+            <div class="flex gap-4 text-base">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT (SPA BEHAVIOR) -->
+    <script>
+        // Simulasi Penyimpanan Data User Sementara (State Management)
+        let currentUser = null;
+
+        // Fungsi Navigasi Halaman Rumah / SPA switcher
+        function showPage(pageName) {
+            // Sembunyikan semua section halaman terlebih dahulu
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Tampilkan section halaman yang dituju
+            document.getElementById(`page-${pageName}`).classList.remove('hidden');
+            
+            // Gulir otomatis ke bagian atas halaman
+            window.scrollTo({top: 0, behavior: 'smooth'});
+
+            // Kondisional khusus halaman member area
+            if (pageName === 'member') {
+                updateMemberUI();
+            }
+        }
+
+        // Logic Fungsi Registrasi Member
+        function handleRegister(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById('regName').value;
+            const emailInput = document.getElementById('regEmail').value;
+
+            if(nameInput && emailInput) {
+                // Menyimpan data ke object simulasi
+                currentUser = {
+                    name: nameInput,
+                    email: emailInput
+                };
+                alert(`Pendaftaran Berhasil! Halo ${nameInput}, akun Anda telah aktif sebagai member.`);
+                document.getElementById('regForm').reset();
+                showPage('member'); // Alihkan otomatis ke Dashboard Member
+            }
+        }
+
+        // Logic Fungsi Masuk / Login Member
+        function handleLogin(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('loginEmail').value;
+            
+            // Jika belum daftar lewat form regis, kita berikan data akun demo dummy
+            if(!currentUser) {
+                currentUser = {
+                    name: "Hafid Aryasatya",
+                    email: emailInput
+                };
+            }
+            updateMemberUI();
+        }
+
+        // Logic Fungsi Logout Member
+        function handleLogout() {
+            currentUser = null;
+            updateMemberUI();
+            showPage('home');
+        }
+
+        // Fungsi Sinkronisasi Antarmuka Layar Area Member
+        function updateMemberUI() {
+            const loginStateView = document.getElementById('member-login-state');
+            const dashboardStateView = document.getElementById('member-dashboard-state');
+
+            if (currentUser) {
+                loginStateView.classList.add('hidden');
+                dashboardStateView.classList.remove('hidden');
+                document.getElementById('memberName').innerText = currentUser.name;
+            } else {
+                loginStateView.classList.remove('hidden');
+                dashboardStateView.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
